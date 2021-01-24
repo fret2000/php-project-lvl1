@@ -1,3 +1,10 @@
 #!/usr/bin/env php
 <?php
-echo "Welcome to the Brain Games!";
+
+// Autoload
+require_once __DIR__ . '/../vendor/autoload.php';
+
+//
+
+$Cli = new Brain\Games\Cli();
+$Cli->welcomeUser();
