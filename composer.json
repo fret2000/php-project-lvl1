@@ -1,0 +1,14 @@
+{
+    "name": "fret/php-project-lvl1",
+    "description": "",
+    "authors": [
+        {
+            "name": "Fret",
+            "email": "k@imagespark.ru"
+        }
+    ],
+    "require": {},
+    "bin": [
+  		"bin/brain-games"
+	]
+}
