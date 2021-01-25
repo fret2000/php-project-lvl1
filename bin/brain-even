@@ -6,6 +6,8 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 //
 
-$game = new Brain\Games\Cli();
+
+$game = new Brain\Games\OddEven();
 
 $game->welcomeUser();
+$game->start();
