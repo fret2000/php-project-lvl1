@@ -26,6 +26,7 @@ class OddEven extends Cli
     		} else {
     			$consecutiveAnswers = 0;
     			line("Let's try again, " . $this->name . "!");
+    			return;
     		}
     	}
     	line("Congratulations, " . $this->name . "!");
