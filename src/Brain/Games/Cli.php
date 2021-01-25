@@ -7,7 +7,7 @@ use function cli\prompt;
 
 class Cli
 {
-	protected $name;
+    protected $name;
 
     public function welcomeUser()
     {
@@ -17,5 +17,4 @@ class Cli
 
         line("Oh! Hi, " . $this->name);
     }
-
 }
