@@ -15,6 +15,6 @@ class Cli
 
         $this->name = prompt("May I have your name?");
 
-        line("Oh! Hi, " . $this->name);
+        line("Hello, " . $this->name);
     }
 }
