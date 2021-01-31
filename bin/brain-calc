@@ -2,12 +2,14 @@
 <?php
 
 // Autoload
-require_once __DIR__ . '/../vendor/autoload.php';
+// require_once __DIR__ . '/../vendor/autoload.php';
 
 //
 
+echo "Welcome!";
 
+/*
 $game = new Brain\Games\Calc();
 
 $game->welcomeUser();
-$game->start();
+$game->start();*/
