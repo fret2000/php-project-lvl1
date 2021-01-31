@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+// Autoload
+require_once __DIR__ . '/../vendor/autoload.php';
+
+//
+
+
+$game = new Brain\Games\Prime();
+
+$game->welcomeUser();
+$game->start();

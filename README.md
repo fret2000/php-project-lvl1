@@ -5,7 +5,25 @@
 
 ## Игра OddEven
 
-Примеры
+[![asciicast](https://asciinema.org/a/386899.svg)](https://asciinema.org/a/386899)
 
-* [![asciicast](https://asciinema.org/a/386899.svg)](https://asciinema.org/a/386899)
-* [![asciicast](https://asciinema.org/a/386897.svg)](https://asciinema.org/a/386897)
+[![asciicast](https://asciinema.org/a/386897.svg)](https://asciinema.org/a/386897)
+
+## Игра: "Калькулятор"
+
+[![asciicast](https://asciinema.org/a/O9Mqf6shqcEqoB2O95Z1nuPVB.svg)](https://asciinema.org/a/O9Mqf6shqcEqoB2O95Z1nuPVB)
+
+## Игра "НОД"
+
+[![asciicast](https://asciinema.org/a/65leyFvBvqs5g7iDB6CgEMn2b.svg)](https://asciinema.org/a/65leyFvBvqs5g7iDB6CgEMn2b)
+
+## Игра "Арифметическая прогрессия"
+
+[![asciicast](https://asciinema.org/a/ipVD4AG3eJNTXijNN2o4claiG.svg)](https://asciinema.org/a/ipVD4AG3eJNTXijNN2o4claiG)
+
+## Игра "Простое ли число?"
+
+[![asciicast](https://asciinema.org/a/0PPRs6NvxX3l4yYXSaLWkjrhk.svg)](https://asciinema.org/a/0PPRs6NvxX3l4yYXSaLWkjrhk)
+
+
+
