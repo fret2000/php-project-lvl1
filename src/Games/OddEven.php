@@ -1,6 +1,6 @@
 <?php
 
-function generateEvenQuestion()
+function generateEvenQuestion(): array
 {
     $value = rand(1, 99);
 
@@ -14,7 +14,7 @@ function generateEvenQuestion()
     return [$currentQuestion, $correctAnswer];
 }
 
-function gameEven()
+function gameEven(): void
 {
     $generalQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
 

@@ -3,7 +3,7 @@
 use function cli\line;
 use function cli\prompt;
 
-function welcomeUser()
+function welcomeUser(): string
 {
     line("Welcome to the Brain Games!");
 
@@ -14,7 +14,7 @@ function welcomeUser()
     return $name;
 }
 
-function start($game, $name, $generalQuestion, $maxRounds)
+function start($game, $name, $generalQuestion, $maxRounds): void
 {
     line($generalQuestion);
     for ($currentRound = 1; $currentRound <= $maxRounds; $currentRound++) {
@@ -29,7 +29,7 @@ function start($game, $name, $generalQuestion, $maxRounds)
     line("Congratulations, " . $name . "!");
 }
 
-function askQuestion($question, $correctAnswer)
+function askQuestion($question, $correctAnswer): boolean
 {
     line('Question: ' . $question);
     $answer = prompt('Your answer');

@@ -1,6 +1,6 @@
 <?php
 
-function generateProgressionQuestion()
+function generateProgressionQuestion(): array
 {
     $startValue = rand(3, 10);
     $incValue = rand(2, 15);
@@ -21,7 +21,7 @@ function generateProgressionQuestion()
     return [$currentQuestion, $correctAnswer];
 }
 
-function gameProgression()
+function gameProgression(): void
 {
 
     $generalQuestion = 'What is the result of the expression?';

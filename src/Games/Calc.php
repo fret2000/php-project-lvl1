@@ -1,6 +1,6 @@
 <?php
 
-function generateCalcQuestion()
+function generateCalcQuestion(): array
 {
     $value1 = rand(1, 99);
     $value2 = rand(1, 99);
@@ -23,7 +23,7 @@ function generateCalcQuestion()
     return [$currentQuestion, $correctAnswer];
 }
 
-function gameCalc()
+function gameCalc(): void
 {
     $generalQuestion = 'What is the result of the expression?';
 
