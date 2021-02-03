@@ -8,8 +8,4 @@ require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../src/Engine.php';
 require_once __DIR__ . '/../src/Games/Gcd.php';
 
-$generalQuestion = 'Find the greatest common divisor of given numbers.';
-
-$name = welcomeUser();
-
-start($name, $generalQuestion, 3);
+game();

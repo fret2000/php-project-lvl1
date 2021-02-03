@@ -14,3 +14,12 @@ function generateQuestion()
 
     return [$currentQuestion, $correctAnswer];
 }
+
+function game()
+{
+    $generalQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+    $name = welcomeUser();
+
+    start($name, $generalQuestion, 3);
+}

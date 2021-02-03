@@ -14,3 +14,12 @@ function generateQuestion()
     }
     return [$currentQuestion, $correctAnswer];
 }
+
+function game()
+{
+    $generalQuestion = 'Find the greatest common divisor of given numbers.';
+
+    $name = welcomeUser();
+
+    start($name, $generalQuestion, 3);
+}

@@ -14,3 +14,12 @@ function generateQuestion()
     }
     return [$currentQuestion, $correctAnswer];
 }
+
+function game()
+{
+    $generalQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+    $name = welcomeUser();
+
+    start($name, $generalQuestion, 3);
+}

@@ -20,3 +20,13 @@ function generateQuestion()
     }
     return [$currentQuestion, $correctAnswer];
 }
+
+function game()
+{
+
+    $generalQuestion = 'What is the result of the expression?';
+
+    $name = welcomeUser();
+
+    start($name, $generalQuestion, 3);
+}

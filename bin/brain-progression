@@ -8,8 +8,4 @@ require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../src/Engine.php';
 require_once __DIR__ . '/../src/Games/Progression.php';
 
-$generalQuestion = 'What is the result of the expression?';
-
-$name = welcomeUser();
-
-start($name, $generalQuestion, 3);
+game();
