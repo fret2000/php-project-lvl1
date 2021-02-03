@@ -1,6 +1,6 @@
 <?php
 
-function generateQuestion()
+function generateGcdQuestion()
 {
     $value1 = rand(3, 99);
     $value2 = rand(6, 99);
@@ -15,11 +15,11 @@ function generateQuestion()
     return [$currentQuestion, $correctAnswer];
 }
 
-function game()
+function gameGcd()
 {
     $generalQuestion = 'Find the greatest common divisor of given numbers.';
 
     $name = welcomeUser();
 
-    start($name, $generalQuestion, 3);
+    start('Gcd', $name, $generalQuestion, 3);
 }

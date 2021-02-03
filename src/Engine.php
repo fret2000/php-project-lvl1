@@ -14,11 +14,12 @@ function welcomeUser()
     return $name;
 }
 
-function start($name, $generalQuestion, $maxRounds)
+function start($game, $name, $generalQuestion, $maxRounds)
 {
     line($generalQuestion);
     for ($currentRound = 1; $currentRound <= $maxRounds; $currentRound++) {
-        list($question, $answer) = generateQuestion();
+        $questionFunction = "generate{$game}Question";
+        list($question, $answer) = $questionFunction();
         if (!askQuestion($question, $answer)) {
             line("Let's try again, " . $name . "!");
             return;

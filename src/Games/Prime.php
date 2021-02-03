@@ -1,6 +1,6 @@
 <?php
 
-function generateQuestion()
+function generatePrimeQuestion()
 {
     $value = rand(1, 99);
 
@@ -15,11 +15,11 @@ function generateQuestion()
     return [$currentQuestion, $correctAnswer];
 }
 
-function game()
+function gamePrime()
 {
     $generalQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
     $name = welcomeUser();
 
-    start($name, $generalQuestion, 3);
+    start('Prime', $name, $generalQuestion, 3);
 }
