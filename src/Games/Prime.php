@@ -12,6 +12,9 @@ function generatePrimeQuestion()
             break;
         }
     }
+    if ($currentQuestion == 1) {
+        $correctAnswer = 'no';
+    }
     return [$currentQuestion, $correctAnswer];
 }
 
