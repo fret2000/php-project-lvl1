@@ -7,7 +7,7 @@ function generateProgressionQuestion(): array
     $missing = rand(3, 7);
     $total = rand(7, 15);
 
-    $current = $startValue;
+    $correctAnswer = $current = $startValue;
     $currentQuestion = '';
     for ($i = 1; $i <= $total; $i++) {
         if ($i == $missing) {

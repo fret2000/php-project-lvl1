@@ -18,6 +18,7 @@ function start($game, $name, $generalQuestion, $maxRounds): void
 {
     line($generalQuestion);
     for ($currentRound = 1; $currentRound <= $maxRounds; $currentRound++) {
+        /** @var Callable **/
         $questionFunction = "generate{$game}Question";
         list($question, $answer) = $questionFunction();
         if (!askQuestion($question, $answer)) {
