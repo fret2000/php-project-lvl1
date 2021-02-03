@@ -5,9 +5,11 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 //
+require_once __DIR__ . '/../src/Engine.php';
+require_once __DIR__ . '/../src/Games/OddEven.php';
 
+$generalQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-$game = new Brain\Games\OddEven();
+$name = welcomeUser();
 
-$game->welcomeUser();
-$game->start();
+start($name, $generalQuestion, 3);

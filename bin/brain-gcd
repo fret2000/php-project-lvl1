@@ -5,9 +5,11 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 //
+require_once __DIR__ . '/../src/Engine.php';
+require_once __DIR__ . '/../src/Games/Gcd.php';
 
+$generalQuestion = 'Find the greatest common divisor of given numbers.';
 
-$game = new Brain\Games\Gcd();
+$name = welcomeUser();
 
-$game->welcomeUser();
-$game->start();
+start($name, $generalQuestion, 3);

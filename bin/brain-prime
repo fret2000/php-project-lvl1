@@ -5,9 +5,11 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 //
+require_once __DIR__ . '/../src/Engine.php';
+require_once __DIR__ . '/../src/Games/Prime.php';
 
+$generalQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-$game = new Brain\Games\Prime();
+$name = welcomeUser();
 
-$game->welcomeUser();
-$game->start();
+start($name, $generalQuestion, 3);

@@ -2,14 +2,14 @@
 <?php
 
 // Autoload
-// require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 //
+require_once __DIR__ . '/../src/Engine.php';
+require_once __DIR__ . '/../src/Games/Calc.php';
 
-echo "Welcome!";
+$generalQuestion = 'What is the result of the expression?';
 
-/*
-$game = new Brain\Games\Calc();
+$name = welcomeUser();
 
-$game->welcomeUser();
-$game->start();*/
+start($name, $generalQuestion, 3);
