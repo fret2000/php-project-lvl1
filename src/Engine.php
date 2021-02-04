@@ -14,7 +14,7 @@ function welcomeUser(): string
     return $name;
 }
 
-function start($game, $name, $generalQuestion, $maxRounds): void
+function start(string $game, string $name, string $generalQuestion, int $maxRounds): void
 {
     line($generalQuestion);
     for ($currentRound = 1; $currentRound <= $maxRounds; $currentRound++) {
@@ -30,7 +30,7 @@ function start($game, $name, $generalQuestion, $maxRounds): void
     line("Congratulations, " . $name . "!");
 }
 
-function askQuestion($question, $correctAnswer): bool
+function askQuestion(string $question, string $correctAnswer): bool
 {
     line('Question: ' . $question);
     $answer = prompt('Your answer');
