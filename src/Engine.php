@@ -30,7 +30,7 @@ function start($game, $name, $generalQuestion, $maxRounds): void
     line("Congratulations, " . $name . "!");
 }
 
-function askQuestion($question, $correctAnswer): boolean
+function askQuestion($question, $correctAnswer): bool
 {
     line('Question: ' . $question);
     $answer = prompt('Your answer');
