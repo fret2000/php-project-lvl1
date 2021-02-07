@@ -1,6 +1,7 @@
 <?php
 
-function isPrime(int $number): bool {
+function isPrime(int $number): bool
+{
     if ($number == 1) {
         return false;
     }
@@ -11,7 +12,7 @@ function isPrime(int $number): bool {
             break;
         }
     }
-    
+
     return true;
 }
 
@@ -20,12 +21,12 @@ function generatePrimeQuestion(): array
     $value = rand(1, 99);
 
     $currentQuestion = $value;
-    if  (isPrime($value))  {
+    if (isPrime($value)) {
         $correctAnswer = 'yes';
     } else {
         $correctAnswer = 'no';
     }
-    
+
     return [$currentQuestion, $correctAnswer];
 }
 
@@ -37,7 +38,7 @@ function gamePrime(): void
 
     $questions = [];
 
-    for ($i=1; $i<= $maxRounds; $i++) {
+    for ($i = 1; $i <= $maxRounds; $i++) {
         $questions[] = generatePrimeQuestion();
     }
 

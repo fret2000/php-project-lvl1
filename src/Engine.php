@@ -15,7 +15,7 @@ function start(string $generalQuestion, array $questions): void
 
     foreach ($questions as $key => $questionAnswerPair) {
         list($question, $answer) = $questionAnswerPair;
-        
+
         if (!askQuestion($question, $answer)) {
             line("Let's try again, " . $name . "!");
             return;

@@ -30,7 +30,7 @@ function gameProgression(): void
 
     $questions = [];
 
-    for ($i=1; $i<= $maxRounds; $i++) {
+    for ($i = 1; $i <= $maxRounds; $i++) {
         $questions[] = generateProgressionQuestion();
     }
 
