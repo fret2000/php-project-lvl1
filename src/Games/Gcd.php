@@ -20,7 +20,5 @@ function gameGcd(): void
 {
     $generalQuestion = 'Find the greatest common divisor of given numbers.';
 
-    $name = welcomeUser();
-
-    start('Gcd', $name, $generalQuestion, 3);
+    start('Gcd', $generalQuestion, 3);
 }

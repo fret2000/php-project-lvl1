@@ -26,7 +26,5 @@ function gameProgression(): void
 
     $generalQuestion = 'What is the result of the expression?';
 
-    $name = welcomeUser();
-
-    start('Progression', $name, $generalQuestion, 3);
+    start('Progression', $generalQuestion, 3);
 }

@@ -27,7 +27,5 @@ function gameCalc(): void
 {
     $generalQuestion = 'What is the result of the expression?';
 
-    $name = welcomeUser();
-
-    start('Calc', $name, $generalQuestion, 3);
+    start('Calc', $generalQuestion, 3);
 }

@@ -22,7 +22,5 @@ function gamePrime(): void
 {
     $generalQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-    $name = welcomeUser();
-
-    start('Prime', $name, $generalQuestion, 3);
+    start('Prime', $generalQuestion, 3);
 }

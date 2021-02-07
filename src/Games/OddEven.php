@@ -18,7 +18,5 @@ function gameEven(): void
 {
     $generalQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-    $name = welcomeUser();
-
-    start('Even', $name, $generalQuestion, 3);
+    start('Even', $generalQuestion, 3);
 }

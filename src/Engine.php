@@ -3,7 +3,7 @@
 use function cli\line;
 use function cli\prompt;
 
-function welcomeUser(): string
+function start(string $game, string $generalQuestion, int $maxRounds): void
 {
     line("Welcome to the Brain Games!");
 
@@ -11,11 +11,6 @@ function welcomeUser(): string
 
     line("Hello, " . $name);
 
-    return $name;
-}
-
-function start(string $game, string $name, string $generalQuestion, int $maxRounds): void
-{
     line($generalQuestion);
     for ($currentRound = 1; $currentRound <= $maxRounds; $currentRound++) {
         /** @var Callable **/
