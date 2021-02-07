@@ -1,20 +1,31 @@
 <?php
 
+function isPrime(int $number): bool {
+    if ($number == 1) {
+        return false;
+    }
+
+    for ($i = 2; $i <= $number / 2; $i++) {
+        if ($number % $i == 0) {
+            return false;
+            break;
+        }
+    }
+    
+    return true;
+}
+
 function generatePrimeQuestion(): array
 {
     $value = rand(1, 99);
 
     $currentQuestion = $value;
-    $correctAnswer = 'yes';
-    for ($i = 2; $i <= $value / 2; $i++) {
-        if ($value % $i == 0) {
-            $correctAnswer = 'no';
-            break;
-        }
-    }
-    if ($currentQuestion == 1) {
+    if  (isPrime($value))  {
+        $correctAnswer = 'yes';
+    } else {
         $correctAnswer = 'no';
     }
+    
     return [$currentQuestion, $correctAnswer];
 }
 
