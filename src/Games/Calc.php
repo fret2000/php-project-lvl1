@@ -10,7 +10,7 @@ function generateCalcQuestion(): array
     $value1 = rand(1, 99);
     $value2 = rand(1, 99);
 
-    switch (array_rand($actions)) {
+    switch ($actions[array_rand($actions)]) {
         case 'increase':
             $currentQuestion = $value1 . ' + ' . $value2;
             $correctAnswer = $value1 + $value2;
