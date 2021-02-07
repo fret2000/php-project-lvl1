@@ -2,20 +2,25 @@
 
 function generateCalcQuestion(): array
 {
+    $actions = [
+        'increase',
+        'decrease',
+        'multiply'
+    ];
     $value1 = rand(1, 99);
     $value2 = rand(1, 99);
 
-    switch (rand(1, 3)) {
-        case 1:
+    switch (array_rand($actions)) {
+        case 'increase':
             $currentQuestion = $value1 . ' + ' . $value2;
             $correctAnswer = $value1 + $value2;
             break;
-        case 2:
+        case 'decrease':
             $currentQuestion = $value1 . ' - ' . $value2;
             $correctAnswer = $value1 - $value2;
             break;
         default:
-        case 3:
+        case 'multiply':
             $currentQuestion = $value1 . ' * ' . $value2;
             $correctAnswer = $value1 * $value2;
             break;
