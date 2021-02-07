@@ -3,7 +3,7 @@
 use function cli\line;
 use function cli\prompt;
 
-function start(string $game, string $generalQuestion, int $maxRounds): void
+function start(string $generalQuestion, array $questions): void
 {
     line("Welcome to the Brain Games!");
 
@@ -12,10 +12,10 @@ function start(string $game, string $generalQuestion, int $maxRounds): void
     line("Hello, " . $name);
 
     line($generalQuestion);
-    for ($currentRound = 1; $currentRound <= $maxRounds; $currentRound++) {
-        /** @var Callable **/
-        $questionFunction = "generate{$game}Question";
-        list($question, $answer) = $questionFunction();
+
+    foreach ($questions as $key => $questionAnswerPair) {
+        list($question, $answer) = $questionAnswerPair;
+        
         if (!askQuestion($question, $answer)) {
             line("Let's try again, " . $name . "!");
             return;

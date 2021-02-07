@@ -33,5 +33,13 @@ function gamePrime(): void
 {
     $generalQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-    start('Prime', $generalQuestion, 3);
+    $maxRounds = 3;
+
+    $questions = [];
+
+    for ($i=1; $i<= $maxRounds; $i++) {
+        $questions[] = generatePrimeQuestion();
+    }
+
+    start($generalQuestion, $questions);
 }

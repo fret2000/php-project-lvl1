@@ -20,5 +20,13 @@ function gameGcd(): void
 {
     $generalQuestion = 'Find the greatest common divisor of given numbers.';
 
-    start('Gcd', $generalQuestion, 3);
+    $maxRounds = 3;
+
+    $questions = [];
+
+    for ($i=1; $i<= $maxRounds; $i++) {
+        $questions[] = generateGcdQuestion();
+    }
+
+    start($generalQuestion, $questions);
 }

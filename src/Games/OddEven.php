@@ -18,5 +18,13 @@ function gameEven(): void
 {
     $generalQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-    start('Even', $generalQuestion, 3);
+    $maxRounds = 3;
+
+    $questions = [];
+
+    for ($i=1; $i<= $maxRounds; $i++) {
+        $questions[] = generateEvenQuestion();
+    }
+
+    start($generalQuestion, $questions);
 }

@@ -32,5 +32,13 @@ function gameCalc(): void
 {
     $generalQuestion = 'What is the result of the expression?';
 
-    start('Calc', $generalQuestion, 3);
+    $maxRounds = 3;
+
+    $questions = [];
+
+    for ($i=1; $i<= $maxRounds; $i++) {
+        $questions[] = generateCalcQuestion();
+    }
+
+    start($generalQuestion, $questions);
 }
