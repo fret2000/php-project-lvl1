@@ -3,7 +3,7 @@
 use function cli\line;
 use function cli\prompt;
 
-function start(string $generalQuestion, array $questions): void
+function start(string $generalQuestion, array $questionsAndAnswers): void
 {
     line("Welcome to the Brain Games!");
 
@@ -13,10 +13,10 @@ function start(string $generalQuestion, array $questions): void
 
     line($generalQuestion);
 
-    foreach ($questions as $key => $questionAnswerPair) {
-        list($question, $answer) = $questionAnswerPair;
+    foreach ($questionsAndAnswers as $key => $questionAnswer) {
+        list($question, $answer) = $questionAnswer;
 
-        if (!askQuestion($question, $answer)) {
+        if (!askQuestionAndCheckAnswer($question, $answer)) {
             line("Let's try again, " . $name . "!");
             return;
         }
@@ -25,7 +25,7 @@ function start(string $generalQuestion, array $questions): void
     line("Congratulations, " . $name . "!");
 }
 
-function askQuestion(string $question, string $correctAnswer): bool
+function askQuestionAndCheckAnswer(string $question, string $correctAnswer): bool
 {
     line('Question: ' . $question);
     $answer = prompt('Your answer');

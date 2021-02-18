@@ -34,11 +34,11 @@ function gameCalc(): void
 
     $maxRounds = 3;
 
-    $questions = [];
+    $questionAndAnswers = [];
 
     for ($i = 1; $i <= $maxRounds; $i++) {
-        $questions[] = generateCalcQuestion();
+        $questionAndAnswers[] = generateCalcQuestion();
     }
 
-    start($generalQuestion, $questions);
+    start($generalQuestion, $questionAndAnswers);
 }

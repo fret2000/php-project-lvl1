@@ -28,11 +28,11 @@ function gameProgression(): void
 
     $maxRounds = 3;
 
-    $questions = [];
+    $questionAndAnswers = [];
 
     for ($i = 1; $i <= $maxRounds; $i++) {
-        $questions[] = generateProgressionQuestion();
+        $questionAndAnswers[] = generateProgressionQuestion();
     }
 
-    start($generalQuestion, $questions);
+    start($generalQuestion, $questionAndAnswers);
 }

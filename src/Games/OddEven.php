@@ -20,11 +20,11 @@ function gameEven(): void
 
     $maxRounds = 3;
 
-    $questions = [];
+    $questionAndAnswers = [];
 
     for ($i = 1; $i <= $maxRounds; $i++) {
-        $questions[] = generateEvenQuestion();
+        $questionAndAnswers[] = generateEvenQuestion();
     }
 
-    start($generalQuestion, $questions);
+    start($generalQuestion, $questionAndAnswers);
 }

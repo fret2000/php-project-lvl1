@@ -35,11 +35,11 @@ function gamePrime(): void
 
     $maxRounds = 3;
 
-    $questions = [];
+    $questionsAndAnswers = [];
 
     for ($i = 1; $i <= $maxRounds; $i++) {
-        $questions[] = generatePrimeQuestion();
+        $questionsAndAnswers[] = generatePrimeQuestion();
     }
 
-    start($generalQuestion, $questions);
+    start($generalQuestion, $questionsAndAnswers);
 }
