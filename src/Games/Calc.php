@@ -4,15 +4,12 @@ function calculate(int $value1, int $value2, string $action): int
 {
     if ($action == '+') {
         return $value1 + $value2;
-    }
-
-    if ($action == '-') {
+    } else if ($action == '-') {
         return $value1 - $value2;
-    }
-
-    if ($action == '*') {
+    } else if ($action == '*') {
         return $value1 * $value2;
     }
+    return 0;
 }
 
 
