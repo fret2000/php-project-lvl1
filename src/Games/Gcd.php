@@ -11,6 +11,8 @@ function findGcd(int $value1, int $value2): int
             return intval($i);
         }
     }
+
+    return 1;
 }
 
 function generateGcdQuestion(): array
