@@ -25,7 +25,7 @@ function generateProgressionQuestion(): array
     return [$currentQuestion, $correctAnswer];
 }
 
-function gameProgression($roundCount): void
+function gameProgression(int $roundCount): void
 {
 
     $generalQuestion = 'What is the result of the expression?';

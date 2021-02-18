@@ -14,7 +14,7 @@ function generateEvenQuestion(): array
     return [$currentQuestion, $correctAnswer];
 }
 
-function gameEven($roundCount): void
+function gameEven(int $roundCount): void
 {
     $generalQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
 

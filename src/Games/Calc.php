@@ -28,7 +28,7 @@ function generateCalcQuestion(): array
     return [$currentQuestion, $correctAnswer];
 }
 
-function gameCalc($roundCount): void
+function gameCalc(int $roundCount): void
 {
     $generalQuestion = 'What is the result of the expression?';
 
