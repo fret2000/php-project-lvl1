@@ -1,6 +1,7 @@
 <?php
 
-function findGcd($value1, $value2) {
+function findGcd($value1, $value2)
+{
     for ($i = round(max($value1, $value2) / 2); $i >= 1; $i--) {
         if ($value1 % $i == 0 && $value2 % $i == 0) {
             return $i;
@@ -16,7 +17,7 @@ function generateGcdQuestion(): array
 
     $currentQuestion = $value1 . ' ' . $value2;
     $correctAnswer = findGcd($value1, $value2);
-    
+
     return [$currentQuestion, $correctAnswer];
 }
 

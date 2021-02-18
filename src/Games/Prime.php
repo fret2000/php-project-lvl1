@@ -20,8 +20,8 @@ function generatePrimeQuestion(): array
     $value = rand(1, 99);
 
     $currentQuestion = $value;
-    $correctAnswer = isPrime($value)?'yes':'no';
-    
+    $correctAnswer = isPrime($value) ? 'yes' : 'no';
+
     return [$currentQuestion, $correctAnswer];
 }
 
