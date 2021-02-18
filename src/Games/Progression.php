@@ -1,5 +1,16 @@
 <?php
 
+function generateProgression(int $start, int $diff, int $count): array
+{
+    $progression = [];
+    $current = $start;
+    for ($i = 1; $i <= $count; $i++) {
+        $progression[] = $current;
+        $current += $diff;
+    }
+    return $progression;
+}
+
 function generateProgressionQuestion(): array
 {
     $startValue = rand(3, 10);
@@ -11,17 +22,13 @@ function generateProgressionQuestion(): array
     $total = rand($minimumElements, $maximumElements);
     $missingElementIndex = rand(1, $total);
 
-    $correctAnswer = $startValue + $diff * ($missingElementIndex - 1);
-    $currentQuestion = '';
-    $current = $startValue;
-    for ($i = 1; $i <= $total; $i++) {
-        if ($i == $missingElementIndex) {
-            $currentQuestion .= '.. ';
-        } else {
-            $currentQuestion .= $current . ' ';
-        }
-        $current += $diff;
-    }
+    $progression = generateProgression($startValue, $diff, $total);
+    $correctAnswer = $progression[$missingElementIndex - 1];
+
+    $progression[$missingElementIndex - 1] = '..';
+
+    $currentQuestion = implode(' ', $progression);
+
     return [$currentQuestion, $correctAnswer];
 }
 

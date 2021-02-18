@@ -1,15 +1,16 @@
 <?php
 
+function isEven(int $value): bool
+{
+    return !!($value % 2 == 0);
+}
+
 function generateEvenQuestion(): array
 {
     $value = rand(1, 99);
 
     $currentQuestion = $value;
-    $correctAnswer = 'yes';
-
-    if ($value % 2 == 1) {
-        $correctAnswer = 'no';
-    }
+    $correctAnswer = isEven($value) ? 'yes' : 'no';
 
     return [$currentQuestion, $correctAnswer];
 }
