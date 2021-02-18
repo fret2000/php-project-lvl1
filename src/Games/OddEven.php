@@ -14,15 +14,13 @@ function generateEvenQuestion(): array
     return [$currentQuestion, $correctAnswer];
 }
 
-function gameEven(): void
+function gameEven($roundCount): void
 {
     $generalQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-    $maxRounds = 3;
-
     $questionAndAnswers = [];
 
-    for ($i = 1; $i <= $maxRounds; $i++) {
+    for ($i = 1; $i <= $roundCount; $i++) {
         $questionAndAnswers[] = generateEvenQuestion();
     }
 

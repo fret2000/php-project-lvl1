@@ -28,15 +28,13 @@ function generateCalcQuestion(): array
     return [$currentQuestion, $correctAnswer];
 }
 
-function gameCalc(): void
+function gameCalc($roundCount): void
 {
     $generalQuestion = 'What is the result of the expression?';
 
-    $maxRounds = 3;
-
     $questionAndAnswers = [];
 
-    for ($i = 1; $i <= $maxRounds; $i++) {
+    for ($i = 1; $i <= $roundCount; $i++) {
         $questionAndAnswers[] = generateCalcQuestion();
     }
 

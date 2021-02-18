@@ -3,34 +3,36 @@
 function generateProgressionQuestion(): array
 {
     $startValue = rand(3, 10);
-    $incValue = rand(2, 15);
-    $missing = rand(3, 7);
-    $total = rand(7, 15);
+    $diff = rand(2, 15);
+    
+    $minimumElements = 7;
+    $maximumElements = 15;
 
-    $correctAnswer = $current = $startValue;
+    $total = rand($minimumElements, $maximumElements);
+    $missingElementIndex = rand(1, $total);
+
+    $correctAnswer = $startValue + $diff*($missingElementIndex-1);
     $currentQuestion = '';
+    $current = $startValue;
     for ($i = 1; $i <= $total; $i++) {
-        if ($i == $missing) {
+        if ($i == $missingElementIndex) {
             $currentQuestion .= '.. ';
-            $correctAnswer = $current;
         } else {
             $currentQuestion .= $current . ' ';
         }
-        $current += $incValue;
+        $current += $diff;
     }
     return [$currentQuestion, $correctAnswer];
 }
 
-function gameProgression(): void
+function gameProgression($roundCount): void
 {
 
     $generalQuestion = 'What is the result of the expression?';
 
-    $maxRounds = 3;
-
     $questionAndAnswers = [];
 
-    for ($i = 1; $i <= $maxRounds; $i++) {
+    for ($i = 1; $i <= $roundCount; $i++) {
         $questionAndAnswers[] = generateProgressionQuestion();
     }
 

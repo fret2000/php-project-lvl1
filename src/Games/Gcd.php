@@ -21,11 +21,9 @@ function generateGcdQuestion(): array
     return [$currentQuestion, $correctAnswer];
 }
 
-function gameGcd(): void
+function gameGcd($roundCount): void
 {
     $generalQuestion = 'Find the greatest common divisor of given numbers.';
-
-    $roundCount = 3;
 
     $questionsAndAnswers = [];
 
