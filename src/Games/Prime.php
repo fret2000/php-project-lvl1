@@ -27,7 +27,7 @@ function generatePrimeQuestion(): array
 
 function gamePrime(int $roundCount): void
 {
-    $generalQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $taskOfTheGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
     $questionsAndAnswers = [];
 
@@ -35,5 +35,5 @@ function gamePrime(int $roundCount): void
         $questionsAndAnswers[] = generatePrimeQuestion();
     }
 
-    start($generalQuestion, $questionsAndAnswers);
+    start($taskOfTheGame, $questionsAndAnswers);
 }

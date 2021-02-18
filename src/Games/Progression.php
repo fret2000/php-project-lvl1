@@ -28,7 +28,7 @@ function generateProgressionQuestion(): array
 function gameProgression(int $roundCount): void
 {
 
-    $generalQuestion = 'What is the result of the expression?';
+    $taskOfTheGame = 'What is the result of the expression?';
 
     $questionAndAnswers = [];
 
@@ -36,5 +36,5 @@ function gameProgression(int $roundCount): void
         $questionAndAnswers[] = generateProgressionQuestion();
     }
 
-    start($generalQuestion, $questionAndAnswers);
+    start($taskOfTheGame, $questionAndAnswers);
 }

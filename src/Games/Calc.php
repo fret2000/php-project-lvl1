@@ -30,7 +30,7 @@ function generateCalcQuestion(): array
 
 function gameCalc(int $roundCount): void
 {
-    $generalQuestion = 'What is the result of the expression?';
+    $taskOfTheGame = 'What is the result of the expression?';
 
     $questionAndAnswers = [];
 
@@ -38,5 +38,5 @@ function gameCalc(int $roundCount): void
         $questionAndAnswers[] = generateCalcQuestion();
     }
 
-    start($generalQuestion, $questionAndAnswers);
+    start($taskOfTheGame, $questionAndAnswers);
 }
