@@ -1,6 +1,6 @@
 <?php
 
-function findGcd($value1, $value2)
+function findGcd(int $value1, int $value2): int
 {
     for ($i = round(max($value1, $value2) / 2); $i >= 1; $i--) {
         if ($value1 % $i == 0 && $value2 % $i == 0) {
